@@ -1,0 +1,36 @@
+// Top-level build file where you can add configuration options com.medhdj.data.common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath BuildPlugins.androidGradleDependency
+        classpath BuildPlugins.kotlinGradleDependency
+        classpath BuildPlugins.hiltGradleDependency
+        classpath BuildPlugins.safeArgsGradleDependency
+    }
+}
+
+plugins {
+    id("quality.detekt")
+}
+
+allprojects {
+    ext {
+        getEnvironmentVariable = { variableName, defaultValue ->
+            def variableValue = System.getenv(variableName)
+            return variableValue != null ? variableValue : defaultValue
+        }
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

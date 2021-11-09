@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Styles.OPlay.ProgressBar" parent="@style/Widget.AppCompat.ProgressBar">
+        <item name="android:indeterminate">true</item>
+        <item name="android:indeterminateTint">@color/blue_dark</item>
+        <item name="android:indeterminateTintMode">src_in</item>
+    </style>
+</resources>

@@ -1,0 +1,15 @@
+plugins {
+    id 'java-library'
+    id 'kotlin'
+    id 'java-test-fixtures'
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+dependencies {
+    implementation Libraries.pagingCommon
+
+    testImplementation TestLibraries.junit
+    testImplementation TestLibraries.mockk
+}

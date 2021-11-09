@@ -1,0 +1,5 @@
+rootProject.name = "OPlay"
+include ':core'
+include ':business'
+include ':data'
+include ':app'

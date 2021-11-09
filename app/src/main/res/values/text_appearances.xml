@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.OPlay.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_size_xl</item>
+    </style>
+
+
+    <style name="TextAppearance.OPlay.Headline2" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textSize">@dimen/text_size_s</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextAppearance.OPlay.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textSize">@dimen/text_size_xs</item>
+        <item name="android:textColor">@color/grey_500</item>
+    </style>
+
+    <style name="TextAppearance.OPlay.Body1" parent="TextAppearance.MaterialComponents.Body1" />
+
+    <style name="TextAppearance.OPlay.Error" parent="TextAppearance.Design.Error" />
+
+    <style name="TextAppearance.OPlay.Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">@dimen/text_size_m</item>
+    </style>
+
+</resources>

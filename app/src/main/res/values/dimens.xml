@@ -1,0 +1,28 @@
+<resources>
+    <!-- Spacings -->
+    <dimen name="spacing_none">0dp</dimen>
+
+    <dimen name="spacing_xxs">5dp</dimen>
+    <dimen name="spacing_xs">10dp</dimen>
+    <dimen name="spacing_s">15dp</dimen>
+    <dimen name="spacing_m">20dp</dimen>
+    <dimen name="spacing_l">30dp</dimen>
+    <dimen name="spacing_xl">50dp</dimen>
+
+    <!-- Fonts -->
+    <dimen name="text_size_xs">12sp</dimen>
+    <dimen name="text_size_s">14sp</dimen>
+    <dimen name="text_size_m">16sp</dimen>
+    <dimen name="text_size_l">18sp</dimen>
+    <dimen name="text_size_xl">24sp</dimen>
+    <dimen name="text_size_xxl">36sp</dimen>
+
+
+    <!-- Shadow -->
+    <dimen name="shadow_radius">4dp</dimen>
+    <dimen name="shadow_width">1dp</dimen>
+
+    <!-- Custom dimensions -->
+
+
+</resources>
