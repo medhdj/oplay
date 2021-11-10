@@ -10,6 +10,6 @@ Sample project, for searching and playing video using OCS API
 - MVVM
 - Kotlin
 - Hilt
-- RxJava
+- coroutines
 - Paging library 3
 - .... see [BuildSrc](https://github.com/medhdj/oplay/blob/main/buildSrc/src/main/kotlin/Dependencies.kt) for more 
