@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/nav_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/searchProgramsFragment">
+
+    <fragment
+        android:id="@+id/searchProgramsFragment"
+        android:name="com.medhdj.oplay.features.programs.search.SearchProgramsFragment"
+        tools:layout="@layout/fragment_search_programs">
+    </fragment>
 
 
 </navigation>

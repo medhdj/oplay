@@ -8,14 +8,15 @@ import com.bumptech.glide.request.RequestOptions
 import timber.log.Timber
 
 fun ImageView.setImage(
-    imageUrl: String,
+    imageUrl: String?,
     @DrawableRes
     placeholderDrawable: Int? = null,
     @DrawableRes
     errorDrawable: Int? = null,
     circleCrop: Boolean = false
 ) {
-    val isUrlCorrect = Patterns.WEB_URL.matcher(imageUrl).matches()
+    val isUrlCorrect =
+        if (imageUrl != null) Patterns.WEB_URL.matcher(imageUrl).matches() else false
     if (isUrlCorrect) {
         val requestOptions = RequestOptions().apply {
             placeholderDrawable?.let { drawable -> this.placeholder(drawable) }

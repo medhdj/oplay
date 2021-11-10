@@ -40,7 +40,7 @@ object Libraries {
 
         const val retrofit = "2.9.0"
         const val okhttp = "4.7.2"
-        const val gson = "2.8.5"
+        const val gson = "2.8.9"
 
         const val appCompat = "1.3.1"
         const val materialDesign = "1.4.0"

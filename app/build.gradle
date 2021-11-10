@@ -53,6 +53,11 @@ dependencies {
     implementation Libraries.hilt
     kapt Libraries.hiltCompiler
 
+    implementation Libraries.okHttp
+    implementation Libraries.okHttpLogging
+    implementation Libraries.retrofit
+    implementation Libraries.retrofitGsonConverter
+
     implementation Libraries.appcompat
     implementation Libraries.materialDesign
     implementation Libraries.constraintLayout
