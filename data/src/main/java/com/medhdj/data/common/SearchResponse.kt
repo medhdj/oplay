@@ -12,4 +12,3 @@ data class SearchResponse<T>(
     @SerializedName("contents")
     val data: List<T>?
 )
-

@@ -2,6 +2,7 @@ plugins {
     id "com.android.application"
     id "kotlin-android"
     id "kotlin-kapt"
+    id "kotlin-parcelize"
     id "dagger.hilt.android.plugin"
     id "androidx.navigation.safeargs.kotlin"
 }
@@ -65,6 +66,10 @@ dependencies {
     implementation Libraries.navigationFragmentKtx
     implementation Libraries.navigationUiKtx
     implementation Libraries.paging
+
+    implementation Libraries.exoplayerCore
+    implementation Libraries.exoplayerUI
+    implementation Libraries.exoplayerDash
 
     implementation Libraries.timber
 }

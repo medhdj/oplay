@@ -11,7 +11,7 @@ import com.medhdj.core.extension.mapError
 import com.medhdj.core.extension.mapSuccess
 import com.medhdj.core.functionnal.Response
 import com.medhdj.oplay.features.programs.ProgramUIModels
-import com.medhdj.oplay.features.programs.toProgramGridItem
+import com.medhdj.oplay.features.programs.toProgramUI
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
@@ -24,7 +24,7 @@ class SearchProgramsViewModel @Inject constructor(
 ) : ViewModel() {
 
     private val pagingDataFlow =
-        MutableLiveData<Response<Throwable, Flow<PagingData<ProgramUIModels.ProgramGridItem>>>>()
+        MutableLiveData<Response<Throwable, Flow<PagingData<ProgramUIModels.Program>>>>()
 
     val pagingData = pagingDataFlow.mapSuccess()
     val pagingDataError = pagingDataFlow.mapError()
@@ -36,7 +36,7 @@ class SearchProgramsViewModel @Inject constructor(
                 val result = searchProgramsUseCase.searchPrograms(withTitle = withTitle)
                     .map {
                         it.map { program ->
-                            program.toProgramGridItem()
+                            program.toProgramUI()
                         }
                     }
                     .cachedIn(viewModelScope)

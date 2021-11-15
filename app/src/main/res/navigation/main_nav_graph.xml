@@ -9,7 +9,19 @@
         android:id="@+id/searchProgramsFragment"
         android:name="com.medhdj.oplay.features.programs.search.SearchProgramsFragment"
         tools:layout="@layout/fragment_search_programs">
+        <action
+            android:id="@+id/action_go_to_details"
+            app:destination="@id/programDetailsFragment" />
     </fragment>
 
+    <fragment
+        android:id="@+id/programDetailsFragment"
+        android:name="com.medhdj.oplay.features.programs.details.ProgramDetailsFragment"
+        tools:layout="@layout/fragment_search_programs">
+
+        <argument
+            android:name="program"
+            app:argType="com.medhdj.oplay.features.programs.ProgramUIModels$Program" />
+    </fragment>
 
 </navigation>

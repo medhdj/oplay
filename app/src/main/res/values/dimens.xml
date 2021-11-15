@@ -8,6 +8,7 @@
     <dimen name="spacing_m">20dp</dimen>
     <dimen name="spacing_l">30dp</dimen>
     <dimen name="spacing_xl">50dp</dimen>
+    <dimen name="spacing_xxl">70dp</dimen>
 
     <!-- Fonts -->
     <dimen name="text_size_xs">12sp</dimen>
@@ -19,10 +20,9 @@
 
 
     <!-- Shadow -->
-    <dimen name="shadow_radius">4dp</dimen>
-    <dimen name="shadow_width">1dp</dimen>
+    <dimen name="box_radius">4dp</dimen>
 
     <!-- Custom dimensions -->
-
+    <dimen name="program_details_full_image_height">270dp</dimen>
 
 </resources>

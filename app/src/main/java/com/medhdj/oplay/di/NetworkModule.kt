@@ -19,7 +19,7 @@ class NetworkModule {
     @Singleton
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(OcsApi.BASE_URL)
+            .baseUrl(OcsApi.DEFAULT_API_URL)
             .client(createOkhttp())
             .addConverterFactory(GsonConverterFactory.create())
             .build()

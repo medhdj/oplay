@@ -1,3 +1,4 @@
 <resources>
     <string name="image_ratio_3_4" translatable="false">3:4</string>
+    <string name="image_ratio_16_9" translatable="false">16:9</string>
 </resources>

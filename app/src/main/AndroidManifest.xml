@@ -15,6 +15,7 @@
         android:theme="@style/Theme.OPlay">
         <activity
             android:name="com.medhdj.oplay.features.main.MainActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
             android:exported="true"
             android:theme="@style/Theme.OPlay.NoActionBar">
             <intent-filter>

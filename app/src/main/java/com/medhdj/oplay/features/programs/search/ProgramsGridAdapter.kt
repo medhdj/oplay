@@ -12,11 +12,11 @@ import com.medhdj.oplay.features.programs.ProgramUIModels
 
 
 class ProgramsGridAdapter :
-    PagingDataAdapter<ProgramUIModels.ProgramGridItem, ProgramsGridAdapter.ProgramGridItemViewHolder>(
+    PagingDataAdapter<ProgramUIModels.Program, ProgramsGridAdapter.ProgramGridItemViewHolder>(
         COMPARATOR
     ) {
 
-    var onItemClickListener: ((ProgramUIModels.ProgramGridItem) -> Unit)? = null
+    var onItemClickListener: ((ProgramUIModels.Program) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProgramGridItemViewHolder =
         ProgramGridItemViewHolder.create(parent)
@@ -32,8 +32,8 @@ class ProgramsGridAdapter :
     class ProgramGridItemViewHolder(private val programGridItemBinding: ProgramGridItemBinding) :
         RecyclerView.ViewHolder(programGridItemBinding.root) {
         fun bind(
-            program: ProgramUIModels.ProgramGridItem,
-            onItemClickListener: ((ProgramUIModels.ProgramGridItem) -> Unit)?
+            program: ProgramUIModels.Program,
+            onItemClickListener: ((ProgramUIModels.Program) -> Unit)?
         ) = with(programGridItemBinding) {
             programImage.setImage(program.imageUrl, R.drawable.ic_launcher_foreground)
 
@@ -54,13 +54,13 @@ class ProgramsGridAdapter :
     }
 
     companion object {
-        private val COMPARATOR = object : DiffUtil.ItemCallback<ProgramUIModels.ProgramGridItem>() {
+        private val COMPARATOR = object : DiffUtil.ItemCallback<ProgramUIModels.Program>() {
             override fun areItemsTheSame(
-                oldItem: ProgramUIModels.ProgramGridItem, newItem: ProgramUIModels.ProgramGridItem
+                oldItem: ProgramUIModels.Program, newItem: ProgramUIModels.Program
             ): Boolean = oldItem.id == newItem.id
 
             override fun areContentsTheSame(
-                oldItem: ProgramUIModels.ProgramGridItem, newItem: ProgramUIModels.ProgramGridItem
+                oldItem: ProgramUIModels.Program, newItem: ProgramUIModels.Program
             ): Boolean = oldItem == newItem
         }
     }

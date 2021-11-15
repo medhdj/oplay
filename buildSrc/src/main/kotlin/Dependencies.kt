@@ -19,7 +19,7 @@ object BuildPlugins {
 }
 
 object AndroidSdk {
-    const val minSdk = 21
+    const val minSdk = 23
     const val compileSdk = 30
     const val targetSdk = 30
 }
@@ -50,6 +50,8 @@ object Libraries {
         const val fragmentKtx = "1.3.6"
         const val paging = "3.0.1"
         const val glide = "4.12.0"
+
+        const val exoplayer = "2.16.0"
 
         const val jodaTime = "2.10.13"
         const val timber = "4.7.1"
@@ -91,6 +93,11 @@ object Libraries {
     const val pagingCommon = "androidx.paging:paging-common:${Versions.paging}"
 
     const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
+
+    // Player
+    const val exoplayerCore = "com.google.android.exoplayer:exoplayer-core:${Versions.exoplayer}"
+    const val exoplayerUI = "com.google.android.exoplayer:exoplayer-ui:${Versions.exoplayer}"
+    const val exoplayerDash = "com.google.android.exoplayer:exoplayer-dash:${Versions.exoplayer}"
 
     // utils
     const val timber = "com.jakewharton.timber:timber:${Versions.timber}"

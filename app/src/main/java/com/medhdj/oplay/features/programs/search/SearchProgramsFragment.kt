@@ -1,5 +1,6 @@
 package com.medhdj.oplay.features.programs.search
 
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import com.medhdj.oplay.R
 import com.medhdj.oplay.databinding.FragmentSearchProgramsBinding
@@ -34,8 +36,13 @@ class SearchProgramsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.setupSearchView()
-        binding.setupProgramsGrid()
+        binding.bindSearchView()
+        binding.bindProgramsGrid()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        requireActivity().requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
     }
 
     override fun onDestroyView() {
@@ -43,10 +50,12 @@ class SearchProgramsFragment : Fragment() {
         _binding = null
     }
 
-    private fun FragmentSearchProgramsBinding.setupSearchView() {
+    private fun FragmentSearchProgramsBinding.bindSearchView() {
         with(searchView) {
             // hack to open the keyboard
-            findViewById<View>(R.id.search_button).performClick()
+            if (query.isNullOrEmpty()) {
+                findViewById<View>(R.id.search_button).performClick()
+            }
 
             setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                 var lastQuery = ""
@@ -64,10 +73,11 @@ class SearchProgramsFragment : Fragment() {
         }
     }
 
-    private fun FragmentSearchProgramsBinding.setupProgramsGrid() {
+    private fun FragmentSearchProgramsBinding.bindProgramsGrid() {
         val gridAdapter = binding.programsGrid.adapter
         gridAdapter.onItemClickListener = {
-
+            val detailsDirection = SearchProgramsFragmentDirections.actionGoToDetails(it)
+            findNavController().navigate(detailsDirection)
         }
 
         gridAdapter.addLoadStateListener { loadState ->
