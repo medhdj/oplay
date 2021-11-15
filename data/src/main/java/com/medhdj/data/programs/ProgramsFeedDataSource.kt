@@ -28,7 +28,7 @@ class ProgramsFeedDataSource(
             val (previousKey, nextKey) = calculatePageOffsets(searchResponse)
 
             LoadResult.Page(
-                data = searchResponse.data.toPrograms(),
+                data = searchResponse.data?.toPrograms() ?: emptyList(),
                 prevKey = previousKey,
                 nextKey = nextKey
             )

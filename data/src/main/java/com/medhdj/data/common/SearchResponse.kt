@@ -10,6 +10,6 @@ data class SearchResponse<T>(
     val next: String? = null,
     val previous: String? = null,
     @SerializedName("contents")
-    val data: List<T>
+    val data: List<T>?
 )
 

@@ -44,3 +44,6 @@ fun <ERROR, DATA, Input : Response<ERROR, DATA>> LiveData<Input>.mapIsLoading():
 
 fun <ERROR, DATA, Input : Response<ERROR, DATA>> LiveData<Input>.mapIsFailure(): LiveData<Boolean> =
     map { it.isFailure }
+
+fun <ERROR, DATA, Input : Response<ERROR, DATA>> LiveData<Input>.mapIsSuccess(): LiveData<Boolean> =
+    map { it.isSuccess }

@@ -27,12 +27,7 @@ class SearchProgramsViewModel @Inject constructor(
         MutableLiveData<Response<Throwable, Flow<PagingData<ProgramUIModels.ProgramGridItem>>>>()
 
     val pagingData = pagingDataFlow.mapSuccess()
-    val error = pagingDataFlow.mapError()
-
-    init {
-        // tmp till the implementation of the search widget
-        searchPrograms("game")
-    }
+    val pagingDataError = pagingDataFlow.mapError()
 
     @SuppressWarnings("TooGenericExceptionCaught")
     fun searchPrograms(withTitle: String) {

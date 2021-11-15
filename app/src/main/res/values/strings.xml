@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">OPlay!</string>
+    <string name="programs_search_hint">search for series, movies and more...</string>
+    <string name="generic_error_message">Sorry ! Something has gone wrong</string>
+    <string name="generic_empty_message">No results Found :( </string>
 </resources>

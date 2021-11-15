@@ -2,11 +2,9 @@ package com.medhdj.oplay.features.programs.search
 
 import android.content.Context
 import android.util.AttributeSet
-import androidx.paging.PagingData
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.medhdj.oplay.features.common.GridSpacingItemDecoration
-import com.medhdj.oplay.features.programs.ProgramUIModels
 
 class ProgramsGrid @JvmOverloads constructor(
     context: Context,
@@ -20,12 +18,7 @@ class ProgramsGrid @JvmOverloads constructor(
         initList()
     }
 
-
     override fun getAdapter(): ProgramsGridAdapter = listAdapter
-
-    suspend fun updateList(data: PagingData<ProgramUIModels.ProgramGridItem>) {
-        listAdapter.submitData(data)
-    }
 
     private fun initList() {
         layoutManager = GridLayoutManager(context, COLUMNS_COUNT)
