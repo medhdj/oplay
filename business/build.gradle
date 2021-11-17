@@ -11,5 +11,7 @@ dependencies {
     implementation Libraries.pagingCommon
 
     testImplementation TestLibraries.junit
+    testImplementation TestLibraries.kluent
     testImplementation TestLibraries.mockk
+
 }

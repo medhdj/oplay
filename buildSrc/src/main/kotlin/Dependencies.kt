@@ -34,7 +34,7 @@ object AndroidApplication {
 object Libraries {
     internal object Versions {
         const val kotlinKtx = "1.6.0"
-        const val coroutines = "1.3.9"
+        const val coroutines = "1.5.2"
 
         const val hilt = BuildPlugins.Versions.hilt
 
@@ -116,4 +116,7 @@ object TestLibraries {
     const val kluent = "org.amshove.kluent:kluent:${Versions.kluent}"
     const val mockk = "io.mockk:mockk:${Versions.mockk}"
     const val archCoreTesting = "androidx.arch.core:core-testing:${Versions.core}"
+    const val coroutinesCore = Libraries.coroutinesCore
+    const val coroutinesTest =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Libraries.Versions.coroutines}"
 }

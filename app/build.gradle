@@ -30,6 +30,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
     buildFeatures {
         dataBinding = true
         viewBinding true
@@ -72,6 +76,13 @@ dependencies {
     implementation Libraries.exoplayerDash
 
     implementation Libraries.timber
+
+    testImplementation(testFixtures(project(":business")))
+    testImplementation TestLibraries.junit
+    testImplementation TestLibraries.mockk
+    testImplementation TestLibraries.kluent
+    testImplementation TestLibraries.archCoreTesting
+    testImplementation TestLibraries.coroutinesTest
 }
 
 kapt {

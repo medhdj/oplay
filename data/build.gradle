@@ -57,4 +57,5 @@ dependencies {
     testImplementation TestLibraries.junit
     testImplementation TestLibraries.mockk
     testImplementation TestLibraries.kluent
+    testImplementation TestLibraries.coroutinesCore
 }
